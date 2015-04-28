@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="KinectApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KinectApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:KinectApp1.ViewModel"
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <vm:MainPageViewModel x:Key="MainPageVM"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{StaticResource MainPageVM}">
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Source="{Binding CwBmp, Mode=OneWay}"/>
+        <Image Grid.Row="0" Grid.Column="1" Source="{Binding IRwBmp, Mode=OneWay}"/>
+        <Canvas Grid.Row="0" Grid.Column="2" x:Name="BodyCanvas"/>-->
+        <Image Width="512" Height="424" Source="{Binding IRwBmp, Mode=OneWay}"/>
+        <Canvas Width="512" Height="424" x:Name="BodyCanvas"/>
+    </Grid>
+</Page>
